@@ -1,0 +1,7 @@
+pip3 insatll wand
+
+brew update
+
+brew install imagemagick
+
+not working in mac.... (raise ImportError('MagickWand shared library not found.)
