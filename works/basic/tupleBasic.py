@@ -14,3 +14,18 @@ t6 = t2 + t3
 print(t6)       # (1, 1, 2, 3)
 print(t3 * 3)   # (1, 2, 3, 1, 2, 3, 1, 2, 3)
 print(len(t5))  # 3
+
+print('----- iteration -----')
+marks = (90, 25, 67, 45, 80)
+
+total = 0
+for mark in marks:
+    total = total + mark
+
+print(total)
+
+for mark in marks:
+    total = 0
+    for i in range(1, mark):
+        total = total + i
+    print(mark, ' : ', total)
