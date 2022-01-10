@@ -42,9 +42,10 @@ my_dict = {"10/26": [100, 130, 100, 100],
 def print_value_by_key(dic, key):
     if not isinstance(dic, dict):
         None
-    if not isinstance(key, str):
+    elif not isinstance(key, str):
         None
-    print(dic[key])
+    else:
+        print(dic[key])
 
 
 print_value_by_key(my_dict, "10/26")
@@ -70,17 +71,17 @@ print()
 def print_mxn(string, word_length):
     if not isinstance(string, str):
         None
-    if not isinstance(word_length, int):
+    elif not isinstance(word_length, int):
         None
-
-    word = ""
-    for idx in range(len(string)):
-        word += string[idx]
-        if len(word) == word_length:
+    else:
+        word = ""
+        for idx in range(len(string)):
+            word += string[idx]
+            if len(word) == word_length:
+                print(word)
+                word = ""
+        if word != "":
             print(word)
-            word = ""
-    if word != "":
-        print(word)
 
 
 print_mxn("아이엠어보이유알어걸", 3)
