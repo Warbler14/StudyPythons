@@ -35,3 +35,12 @@ print(dic3[2], " ", dic3.get(2))    # 2000   2000
 dic3.clear()
 print(dic3)                         # {}
 print(dic3.get(2, 'default'))       # default
+
+
+language = {}
+language['java'] = 'terran'
+language['javascript'] = 'zerg'
+language['python'] = 'protoss'
+
+for key in language.keys():
+    print(key, '=', language[key])

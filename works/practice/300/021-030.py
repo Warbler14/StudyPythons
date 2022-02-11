@@ -33,5 +33,5 @@ string = 'abcdfe2a354a32a'
 print(string.replace('a', 'A'))
 
 string = 'abcd'
-string.replace('b', 'B')
-print(string)   # abcd
+string2 = string.replace('b', 'B')
+print(string, string2)   # abcd
