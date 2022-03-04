@@ -4,11 +4,11 @@ import time
 
 
 def return_abc():
-    alpabets = []
+    alphabets = []
     for ch in "ABC":
         time.sleep(1)
-        alpabets.append(ch)
-    return alpabets
+        alphabets.append(ch)
+    return alphabets
 
 
 def yield_abc():
