@@ -10,14 +10,6 @@ c = sum_data(1, 2)
 print(c)
 
 
-def return_upper_hi():
-    return 'HI'
-
-
-resultStr = return_upper_hi()
-print(resultStr)
-
-
 def sum_many(*args):
     result = 0
     for idx in args:
