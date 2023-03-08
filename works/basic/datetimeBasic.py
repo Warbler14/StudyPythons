@@ -9,6 +9,12 @@ print(day1, day1.weekday(), day2, day2.weekday())
 diff = day1 - day2
 print('diff days : ', diff.days)
 
+meetingDay = datetime.date(2022, 10, 23)
+remain = meetingDay - datetime.date.today()
+print('meetingDay : ', meetingDay)
+print('today : ', datetime.date.today())
+print('remain days : ', remain.days)
+
 
 def print_datetime(date_time):
     print('-------------------------------')
@@ -29,6 +35,8 @@ print_datetime(day3)
 day4 = datetime.datetime(2022, 2, 13, 0, 0, 5)
 print_datetime(day4)
 
-today = datetime.date.today();
+today = datetime.date.today()
 print(today)
 
+print('isoformat : ', datetime.date(2022, 9, 3).isoformat())
+print('ctime : ', datetime.date(2022, 9, 3).ctime())

@@ -1,0 +1,15 @@
+from decimal import *
+
+h = 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+
+print(h)
+
+a = 4 + 5j
+print(a)
+print(a.real)
+print(a.imag)
+
+A = Decimal(1234)
+print(A)
+A = Decimal('1234.5678')
+print(A)
