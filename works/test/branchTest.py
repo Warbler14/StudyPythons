@@ -17,3 +17,6 @@ sleep_test(count, secs)
 
 secs = 1
 sleep_test(count, secs)
+
+secs = 1
+sleep_test(count, secs)
