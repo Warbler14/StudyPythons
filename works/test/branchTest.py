@@ -3,11 +3,11 @@
 import time
 
 
-def sleep_test(cnt, secs):
+def sleep_test(cnt, second):
     current = cnt
     while current > 0:
         print(current)
-        time.sleep(secs)
+        time.sleep(second)
         current = current - 1
 
 
