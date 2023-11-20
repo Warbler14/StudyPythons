@@ -14,3 +14,6 @@ def sleep_test(cnt, second):
 count = 10
 secs = 2
 sleep_test(count, secs)
+
+secs = 1
+sleep_test(count, secs)
