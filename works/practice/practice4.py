@@ -6,28 +6,29 @@ from random import randint, random, randrange, sample
 # print(int(random() * 10))
 # print(int(random() * 10))
 
-def test_random(limit):
+
+def test_random(limit_val):
     random_result_list = []
     for x in range(10):
-        num = int(random() * limit) + 1
+        num = int(random() * limit_val) + 1
         random_result_list.append(num)
 
     print(random_result_list)
 
 
-def test_randrange(limit):
+def test_randrange(limit_val):
     randrange_result_list = []
     for x in range(10):
-        num = randrange(1, limit)
+        num = randrange(1, limit_val)
         randrange_result_list.append(num)
 
     print(randrange_result_list)
 
 
-def test_randint(limit):
+def test_randint(limit_val):
     randint_result_list = []
     for x in range(10):
-        num = randint(1, limit)
+        num = randint(1, limit_val)
         randint_result_list.append(num)
 
     print(randint_result_list)
