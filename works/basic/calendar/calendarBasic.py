@@ -7,6 +7,7 @@ import calendar
 
 print(sys.version)
 
+
 def is_leap_year(year):
     if year % 400 == 0:
         return True
@@ -23,7 +24,7 @@ print(0, is_leap_year(0))
 print(1, is_leap_year(1))
 print(4, is_leap_year(4))
 print(1200, is_leap_year(1200))
-print(900, is_leap_year(700))
+print(900, is_leap_year(900))
 print(2020, is_leap_year(2020))
 
 print('-------------------------------')
