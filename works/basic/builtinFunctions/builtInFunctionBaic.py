@@ -11,6 +11,9 @@ iter, list, locals, len, max, min, map, next, memoryview, object, oct,
 ord, open, pow, print, property, range, repr, reversed, round, set, setattr,
 slice, sorted, str, sum, tuple, vars, zip, __import__, super
 
+
+https://docs.python.org/3/library/functions.html
+
 3.10
 aiter
 """
