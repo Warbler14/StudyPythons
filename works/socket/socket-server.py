@@ -17,6 +17,12 @@ PORT = 9999
 def threaded(client_socket, addr):
     print('>> Connected by :', addr[0], ':', addr[1])
 
+    ## thread to client get client info and store data
+    first_data = client_socket.recv(1024)
+    print('first_data : ' + first_data.decode())
+
+
+
     ## process until client disconnect ##
     while True:
         try:
@@ -63,6 +69,7 @@ try:
         client_socket, addr = server_socket.accept()
         client_sockets.append(client_socket)
         start_new_thread(threaded, (client_socket, addr))
+
         print("참가자 수 : ", len(client_sockets))
 except Exception as e:
     print('에러 : ', e)
