@@ -44,3 +44,12 @@ language['python'] = 'protoss'
 
 for key in language.keys():
     print(key, '=', language[key])
+
+
+dic4 = {'name1': 'tom'}
+dic5 = {'name2': 'max'}
+dic4.update(dic5)
+print(dic4)
+print(dic5)
+
+
