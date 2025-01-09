@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-filePath = "./file/note.txt"
+filePath = "note.txt"
 file = open(filePath, 'w')
 for i in range(1, 11):
     file.write("%d\n" % i)

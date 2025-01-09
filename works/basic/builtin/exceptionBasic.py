@@ -2,7 +2,7 @@
 
 print('--- test ZeroDivisionError ---')
 number = 100
-filePath = "./file/text.txt"
+filePath = "text.txt"
 file = open(filePath, 'w')
 try:
     for i in range(10, -10, -1):
