@@ -1,6 +1,9 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+import os.path
+
+
 # ----------------------------------------
 # required
 # ----------------------------------------
@@ -24,14 +27,24 @@ def to_file_name(target_url):
     data = data.replace(".html", ".txt")
     return data
 
-url = "https://imsdb.com/scripts/Star-Wars-Return-of-the-Jedi.html"
+def fetch_from_urls(url_list, save_directory, _scoop ):
+    for url in url_list:
+        save_path = save_directory + to_file_name(url)
+        if os.path.isfile(save_path):
+            print(save_path + " found, nothing to do.")
+        else:
+            print("start fetch " + url + " and save : " + save_path)
+            soup = fetch(url)
+            element = _scoop(soup)
+            download(save_path, element.text.encode())
+
+def scoop(soup):
+    return soup.find('td', {"class": "scrtext"})
+
+
 base_directory = "/Users/kook/script/"
-save_path = base_directory + to_file_name(url)
+urls = [
+    "https://imsdb.com/scripts/Star-Wars-Return-of-the-Jedi.html",
+    "https://imsdb.com/scripts/Sleepless-in-Seattle.html"]
 
-
-
-bsObject = fetch(url)
-
-element = bsObject.find('td', {"class":"scrtext"})
-
-download(save_path, element.text.encode())
+fetch_from_urls(urls, base_directory, scoop)
