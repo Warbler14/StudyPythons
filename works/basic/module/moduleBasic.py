@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-import testMod1
-from testMod1 import *
-import testMod2
+from works.basic.module.mod import testMod1, testMod2
+from works.basic.module.mod.testMod1 import add, sub
 import os
-from works.basic.system import sysImport
+from works.basic.module.system import sysImport
 
 print('--- testMod1 ---')
 print(testMod1.__name__)
