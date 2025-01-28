@@ -153,3 +153,5 @@ number = 10
 day = "three"
 print("I eat %d apples." % number)
 print("I ate %d apples. so I was sick for %s days." % (number, day))
+
+print("_ab".title())

@@ -3,7 +3,7 @@ import os
 from wand.image import Image
 
 
-current_path = os.path.realpath('.')
+current_path = os.path.realpath('')
 original_file = 'test01.jpg'
 original_path = current_path + '\\' + original_file
 modulated_path = current_path + '\\' + 'modulated_' + original_file
