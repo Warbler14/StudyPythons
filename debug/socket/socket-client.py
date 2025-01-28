@@ -5,7 +5,7 @@ from _thread import *
 
 import uuid
 
-HOST = '192.168.45.177' ## server에 출력되는 ip를 입력해주세요 ##
+HOST = '127.0.0.1' ## server에 출력되는 ip를 입력해주세요 ##
 PORT = 9999
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -24,6 +24,7 @@ client_uuid = uuid.uuid1()
 print('client uuid : ' + str(client_uuid))
 client_socket.send('abc'.encode())
 
+#TODO 서버 연결이 끊어지면 자동 종료하는 기능 추가
 while True:
     message = input()
     if message == 'quit':

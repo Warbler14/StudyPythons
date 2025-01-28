@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import copy
+
 # 테스트 2021-12-11
 
 print('----- index -----')
@@ -118,3 +120,15 @@ print(coinList)
 
 coin500 = [coin for coin in coinBag if coin == 500]
 print(coin500)
+
+def pop_list(names):
+    length = len(names)
+    print("length : ", length)
+    for i in range(length):
+        current_name = names.pop()
+        print("pop name : ", current_name, ", remain : ", len(names))
+
+unprinted_names = ['James', 'Robert', 'Lisa', 'Mary']
+pop_list(copy.deepcopy(unprinted_names))
+
+print("unprinted_names : ", unprinted_names)

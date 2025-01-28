@@ -1,19 +1,24 @@
 # -*- coding: utf-8 -*-
 import copy
 
+# 전체 출력
 dic1 = {'name': 'robin', 'phone': '01011112222', 'birth': '0111'}
-print(dic1)             # {'name': 'robin', 'phone': '01011112222', 'birth': '0111'}
 
+# 값 추가 와 목록 출력
+print('before : ', dic1)             # {'name': 'robin', 'phone': '01011112222', 'birth': '0111'}
 dic1['job'] = 'programmer'
-print(dic1)             # {'name': 'robin', 'phone': '01011112222', 'birth': '0111', 'job': 'programmer'}
-print(dic1.keys())      # dict_keys(['name', 'phone', 'birth', 'job'])
+print('after add element : ', dic1)             # {'name': 'robin', 'phone': '01011112222', 'birth': '0111', 'job': 'programmer'}
+
+print("'name' in dictionary : ", end="")
 print('name' in dic1)   # True
 
-
+print('dictionary keys  :', dic1.keys())      # dict_keys(['name', 'phone', 'birth', 'job'])
 for key in dic1.keys():
     print("key : " + key + ", value : " + dic1[key])
 
-print(dic1.items())     # dict_items([('name', 'robin'), ('phone', '01011112222'), ('birth', '0111'), ('job', 'programmer')])
+print("items : ", dic1.items())     # dict_items([('name', 'robin'), ('phone', '01011112222'), ('birth', '0111'), ('job', 'programmer')])
+
+print("--------------------------------------------")
 
 dic2 = dic1
 print(id(dic1), id(dic2))           # 4469544384 4469544384

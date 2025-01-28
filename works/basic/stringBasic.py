@@ -43,6 +43,13 @@ print(strData[:3])
 splitStringData = strData.split(" ")
 print(splitStringData)
 
+print("---------------strip-----------------")
+
+study_language = "   python rstrip test   "
+print(study_language.rstrip())
+print(study_language.lstrip())
+print(study_language.strip())
+
 print("--------------------------------")
 
 testStr1 = "abcdefgh"
@@ -146,3 +153,5 @@ number = 10
 day = "three"
 print("I eat %d apples." % number)
 print("I ate %d apples. so I was sick for %s days." % (number, day))
+
+print("_ab".title())

@@ -4,7 +4,7 @@ from wand.image import Image
 from wand.color import Color
 
 
-current_path = os.path.realpath('.')
+current_path = os.path.realpath('')
 original_file = 'test02.jpg'
 original_path = current_path + '\\' + original_file
 modulated_path = current_path + '\\' + 'modulated_' + original_file
