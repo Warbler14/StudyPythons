@@ -12,6 +12,8 @@ search_box.send_keys("WebDriver 사용법")
 # 검색 버튼 클릭
 search_box.submit()
 
+# 일반 사용자가 브라우저를 통해 검색하면 브라우저의 User-Agent, Referer, Cookies 정보가 포함됩니다.
+
 # Google의 시스템이 컴퓨터 네트워크에서 비정상적인 트래픽을 감지했습니다. 이 페이지는 로봇이 아니라 실제 사용자가 요청을 보내고 있는지를 확인하는 페이지입니다. 왜 이런 현상이 발생하는 거죠?
 #
 #
