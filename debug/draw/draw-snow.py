@@ -1,8 +1,12 @@
 import turtle as t
+import random
+from collections import namedtuple
 
 # ===== Screen setup =====
+width = 800
+height = 800
 screen = t.Screen()
-screen.setup(800, 800)
+screen.setup(width, height)
 screen.setworldcoordinates(-300, -300, 300, 300)
 
 # ===== Helpers =====
@@ -42,10 +46,33 @@ def draw_snow(size, min_len=10):
 t.speed(0)
 t.hideturtle()
 
-pen_point(-100, 100, 0)
-draw_snow(100, min_len=6)
+Point = namedtuple('Point', ['x', 'y'])
+world_map = {}
 
-pen_point(-200, 100, 30)  # 각도 바꿔도 안정
-draw_snow(100, min_len=6)
+for i in range(20):
+    while True:
+        rand_x = random.randint(1, 300)
+        rand_y = random.randint(1, 300)
+        new_pos = Point(x=rand_x, y=rand_y)
+
+        key = f"entity_{rand_x}_{rand_y}"
+
+        if len(world_map) == 0:
+            world_map[key] = new_pos
+            break
+
+        if new_pos not in world_map.values():
+            world_map[key] = new_pos
+            break  # Success! Exit the 'while' loop
+        else:
+            print(f"Collision at {new_pos}! Recalculating...")
+
+print(world_map)
+
+for name, pos in world_map.items():
+    print(name, pos)
+
+    pen_point(-pos.x, pos.y, 0)
+    draw_snow(100, min_len=6)
 
 t.done()
