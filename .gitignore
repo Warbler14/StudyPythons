@@ -75,7 +75,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # IPython
 profile_default/
@@ -104,6 +104,8 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.envrc
+.venv/
 env/
 venv/
 ENV/
@@ -127,15 +129,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
+# Notebook exports and editor noise
+*.nbconvert.ipynb
+.DS_Store
+.idea/

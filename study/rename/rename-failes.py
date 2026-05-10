@@ -53,7 +53,7 @@ def execute_rename(rename_plan):
 
 
 # --- 실행 로직 ---
-target_directory = "/Volumes/T7/study/japan/n4/n4-grammar"
+target_directory = "/Volumes/T7/study/japan/n4/n4-grammar2/data"
 file_prefix = "n4_grammar_"  # 원하는 접두사 설정
 
 plan = get_rename_list(target_directory, file_prefix)
